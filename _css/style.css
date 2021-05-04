@@ -1,0 +1,476 @@
+/*   Formatação Geral*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-Sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+/*   Keyframes - Redes Sociais*/
+
+@keyframes bounce {
+    10%, 40%, 70% {
+        transform: translateY(-5px);
+    }
+
+    25%, 55%, 85% {
+        transform: translateY(5px);
+    }
+}
+
+/*   Header   */
+
+ul, nav {
+    list-style: none;
+}
+
+nav li {
+    transition: all .2s ease-in;
+}
+
+nav li:hover {
+    transform: translateY(-5px);
+    /*box-shadow: 0px 5px 3px 0px rgba(82, 72, 72, .2);*/
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+}
+
+header {
+    background-color: #191c03;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header img {
+    width: 130px;
+}
+
+header nav {
+    display: flex;
+}
+
+header li a {
+    color: #c3c63b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header li {
+    margin: 0 15px;
+    text-align: center;
+    /*border-right: 2px solid #c3c63b;*/
+}
+
+header li:hover {
+    border-bottom: 2px solid #c3c63b;
+}
+
+header li:first-child {
+    margin-left: 0;
+}
+
+header li:last-child {
+    margin-right: 0;
+}
+
+/*   Responsive - Header   */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header img {
+        margin-bottom: 15px;
+    }
+}
+
+/*   Redes Sociais   */
+
+.redes {
+    display: flex;
+    position: relative;
+    background-color: #6a742f;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 90px;
+    width: 100%;
+}
+
+.redes li {
+    margin: 10px;
+    font-size: 1.1rem;
+    list-style: none;
+    transition: all .3s ease-in;
+}
+
+.redes li:last-child {
+    margin-right: 50px;
+}
+
+.redes li:hover {
+    animation: bounce .8s;
+}
+
+.redes li a {
+    color: #c3c63b;
+    transition: all .5s ease-in;
+}
+
+.redes p {
+    color: #c3c63b;
+    text-align: center;
+}
+
+/*   Responsive - Redes Sociais   */
+
+@media (max-width: 700px) {
+    .redes {
+        margin-top: 127px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/*   Hero   */
+
+.hero {
+    background-image: url(../_img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*   Responsive - Hero   */
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/*   Conforto   */
+
+.conforto {
+    background-color: #6a742f;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.conf {
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#aux {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conf li {
+    display: flex;
+    list-style: none;
+    font-size: 2.5em;
+    color: #c3c63b;
+}
+
+.conf p {
+    margin: 15px;
+    color: #c3c63b;
+}
+
+/*   Resposive - Conforto   */
+
+@media (max-width: 700px) {
+    .conforto {
+        height: 570px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #aux {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*   Conheça-o-hotel   */
+
+.conheca-o-hotel {
+    display: flex;
+    background-color: #f5e7e6;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.conheca-o-hotel h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #191c03;
+    text-align: center;
+}
+
+.conheca-o-hotel p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #191c03;
+    text-align: center;
+}
+
+.conheca-o-hotel hr {
+    width: 200px;
+    height: 2px;
+    background-color: #191c03;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.conheca-o-hotel .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conheca-o-hotel .grid li {
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.conheca-o-hotel .grid li.small, .large {
+    flex-basis: 50%;
+}
+
+/*   Responsive - Conheça-o-hotel*/
+
+@media (max-width: 700px) {
+    .conheca-o-hotel .grid li.small, .conheca-o-hotel .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+/*   Características   */
+
+.caracteristicas {
+    background-color: #191c03;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.caracteristicas h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+.caracteristicas p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+.caracteristicas hr {
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.caracteristicas .grid {
+    width: 100%;
+    display: flex;
+}
+
+.caracteristicas .grid li {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.caracteristicas .grid li i {
+    color: #c3c63b;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4 {
+    font-size: 1.5rem;
+    color: #c3c63b;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li p {
+    color: #fff;
+}
+
+/*Responsive - Características*/
+
+@media (max-width: 850px) {
+    .caracteristicas .grid {
+        flex-direction: column;
+    }
+}
+
+/*   Contatos   */
+
+.contatos {
+    display: flex;
+    background-color: #f5e7e6;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 50px;
+}
+
+.contatos h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #c3c63b;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contatos hr {
+    width: 200px;
+    height: 2px;
+    background-color: #c3c63b;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.contatos form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px;
+}
+
+.contatos input {
+    padding: 15px;
+    border: 1px solid #c3c63b;
+    border-radius: 4px;
+    margin: 10px;
+    flex: 1;
+}
+
+.contatos #name-tel {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contatos #name {
+    flex-basis: 50%;
+}
+
+.contatos #tel {
+    flex-basis: 50%;
+}
+
+.contatos #email {
+    width: 97.2%;
+}
+
+.contatos textarea {
+    width: 97.2%;
+    border: 1px solid #c3c63b;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.contatos button {
+    padding: 15px;
+    background-color: #c3c63b;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.contatos button:hover {
+    transition: all .3s ease-in;
+    border: 1px solid #c3c63b;
+    background-color: #fff;
+    color: #c3c63b;
+}
+
+/*Responsive - Contatos*/
+
+@media (max-width: 700px) {
+    .contatos input {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contatos #email {
+        width: 93%;
+    }
+
+    .contatos textarea {
+        width: 93%;
+    }
+    
+}
+
+/*   Footer   */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #191c03;
+    padding: 50px 0px;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    color: #c3c63b;
+    text-align: center;
+}
+
+footer a {
+    color: #c3c63b;
+}
